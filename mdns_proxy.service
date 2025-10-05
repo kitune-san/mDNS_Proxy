@@ -1,0 +1,11 @@
+[Unit]
+Description=mDNS Proxy for L3VPN
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mdns_proxy/
+ExecStart=/usr/bin/python3 /opt/mdns_proxy/mdns_proxy.py
+
+[Install]
+WantedBy=multi-user.target
